@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Start a Nonprofit in Michigan — Learn The Biz</title>
+  <meta name="description" content="How to start a nonprofit in Michigan, step by step and in plain English. Articles of Incorporation, 501(c)(3) status with Form 1023, Attorney General charitable registration, and Form 990." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; }
+
+    /* ── UNIVERSAL NAV ── */
+    .ltb-nav { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 62px; background: #0a0a0a; border-bottom: 0.5px solid #2a2a2a; position: sticky; top: 0; z-index: 1000; }
+    .ltb-logo { font-size: 20px; font-weight: 900; letter-spacing: 4px; color: #c9a84c; text-decoration: none; flex-shrink: 0; }
+    .ltb-links { display: flex; align-items: center; gap: 4px; }
+    .ltb-item { position: relative; }
+    .ltb-item-btn { display: flex; align-items: center; gap: 6px; padding: 0 16px; height: 62px; font-size: 13px; font-weight: 500; color: #aaa; background: none; border: none; cursor: pointer; font-family: inherit; letter-spacing: 0.5px; white-space: nowrap; text-decoration: none; }
+    .ltb-item-btn:hover { color: #c9a84c; }
+    .ltb-item.open > .ltb-item-btn { color: #c9a84c; }
+    .ltb-arrow { font-size: 9px; transition: transform 0.2s; }
+    .ltb-item.open > .ltb-item-btn .ltb-arrow { transform: rotate(180deg); }
+    .ltb-drop { display: none; position: absolute; top: 62px; left: auto; right: 0; background: #111; border: 0.5px solid #2a2a2a; border-radius: 10px; min-width: 220px; box-shadow: 0 12px 40px rgba(0,0,0,0.7); z-index: 1001; overflow: visible; padding: 6px 0; }
+    .ltb-item.open > .ltb-drop { display: block; }
+    .ltb-drop-item { position: relative; display: flex; align-items: center; justify-content: space-between; padding: 11px 16px; font-size: 14px; color: #ccc; text-decoration: none; cursor: pointer; white-space: nowrap; gap: 12px; background: none; border: none; width: 100%; font-family: inherit; text-align: left; }
+    .ltb-drop-item:hover { background: #1a1a1a; color: #c9a84c; }
+    .ltb-drop-item .ltb-sub-arrow { font-size: 10px; color: #555; flex-shrink: 0; }
+    .ltb-drop-item:hover .ltb-sub-arrow { color: #c9a84c; }
+    .ltb-drop-divider { height: 0.5px; background: #1e1e1e; margin: 4px 0; }
+    .ltb-drop-label { padding: 8px 16px 4px; font-size: 10px; letter-spacing: 2px; color: #555; text-transform: uppercase; }
+    .ltb-drop-item.soon { color: #444; cursor: default; pointer-events: none; }
+    .ltb-sub { display: none; position: absolute; top: -6px; right: calc(100% + 1px); left: auto; background: #111; border: 0.5px solid #2a2a2a; border-radius: 10px; width: 220px; max-height: 320px; overflow-y: auto; box-shadow: 0 12px 40px rgba(0,0,0,0.7); z-index: 1002; padding: 6px 0; }
+    .ltb-drop-item.open-sub > .ltb-sub { display: block; }
+    .ltb-sub::-webkit-scrollbar { width: 5px; }
+    .ltb-sub::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 3px; }
+    .ltb-sub a { display: block; padding: 10px 16px; font-size: 13px; color: #ccc; text-decoration: none; }
+    .ltb-sub a:hover { background: #1a1400; color: #c9a84c; }
+    .ltb-sub a.soon { color: #333; pointer-events: none; font-size: 12px; }
+    .ltb-sub-header { padding: 8px 16px 4px; font-size: 10px; letter-spacing: 2px; color: #555; text-transform: uppercase; }
+    .ltb-cta { background: #c9a84c; color: #0a0a0a; font-size: 12px; font-weight: 700; padding: 9px 20px; border-radius: 6px; border: none; cursor: pointer; letter-spacing: 1px; text-transform: uppercase; font-family: inherit; text-decoration: none; display: inline-block; margin-left: 8px; white-space: nowrap; }
+    .ltb-cta:hover { background: #e2bf6a; }
+
+    /* ── PAGE STYLES ── */
+    .hero { text-align: center; padding: 80px 40px 60px; border-bottom: 0.5px solid #1e1a08; background: #0a0a0a; }
+    .state-badge { display: inline-block; background: #1a1400; border: 0.5px solid #c9a84c; color: #c9a84c; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 24px; }
+    .hero h1 { font-size: 48px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+    .hero h1 span { color: #c9a84c; }
+    .gold-line { width: 60px; height: 2px; background: #c9a84c; margin: 0 auto 28px; border-radius: 1px; }
+    .hero p { font-size: 18px; color: #999; max-width: 600px; margin: 0 auto 36px; line-height: 1.65; }
+
+    .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #1a1a1a; border-top: 0.5px solid #1a1a1a; border-bottom: 0.5px solid #1a1a1a; }
+    .stat { background: #0f0f0f; padding: 28px 20px; text-align: center; }
+    .stat .num { font-size: 28px; font-weight: 900; color: #c9a84c; }
+    .stat .lbl { font-size: 12px; color: #666; letter-spacing: 1px; margin-top: 6px; text-transform: uppercase; }
+
+    .what-section { max-width: 860px; margin: 0 auto; padding: 72px 40px; border-bottom: 0.5px solid #1a1a1a; }
+    .section-tag { font-size: 11px; letter-spacing: 3px; color: #c9a84c; text-transform: uppercase; margin-bottom: 14px; }
+    .what-section h2 { font-size: 32px; font-weight: 700; margin-bottom: 24px; line-height: 1.2; }
+    .what-section p { font-size: 17px; color: #999; line-height: 1.75; margin-bottom: 18px; }
+    .pro-con { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+    .pro-box { background: #0a1a0a; border: 0.5px solid #1a3a1a; border-radius: 12px; padding: 24px; }
+    .con-box { background: #1a0a0a; border: 0.5px solid #3a1a1a; border-radius: 12px; padding: 24px; }
+    .pro-box h4 { color: #4caf50; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+    .con-box h4 { color: #e57373; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+    .pro-box li, .con-box li { font-size: 14px; color: #999; line-height: 1.7; margin-left: 16px; margin-bottom: 6px; }
+
+    /* three agencies */
+    .agency-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+    .agency-card { background: #111; border: 0.5px solid #2a2a2a; border-radius: 12px; padding: 24px 20px; }
+    .agency-card .agency-tag { font-size: 12px; letter-spacing: 2px; color: #c9a84c; text-transform: uppercase; margin-bottom: 10px; }
+    .agency-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
+    .agency-card p { font-size: 14px; color: #999; line-height: 1.7; margin-bottom: 14px; }
+    .agency-card .agency-fee { display: inline-block; background: #1a1400; border: 0.5px solid #c9a84c; color: #c9a84c; font-size: 12px; padding: 3px 10px; border-radius: 20px; }
+
+    .steps-section { max-width: 860px; margin: 0 auto; padding: 72px 40px; }
+    .steps-section > h2 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+    .steps-section > p { font-size: 17px; color: #999; margin-bottom: 52px; line-height: 1.65; }
+
+    .step-card { background: #111; border: 0.5px solid #222; border-radius: 16px; padding: 36px 32px; margin-bottom: 24px; }
+    .step-card.active-step { border-color: #3a2e10; }
+    .step-header { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 20px; }
+    .step-circle { width: 44px; height: 44px; border-radius: 50%; background: #c9a84c; color: #0a0a0a; font-size: 16px; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-title-wrap h3 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+    .step-title-wrap .step-sub { font-size: 13px; color: #666; letter-spacing: 1px; text-transform: uppercase; }
+    .step-body p { font-size: 16px; color: #999; line-height: 1.75; margin-bottom: 16px; }
+    .step-body p:last-child { margin-bottom: 0; }
+
+    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+    .info-pill { background: #0f0f0f; border: 0.5px solid #2a2a2a; border-radius: 10px; padding: 16px; text-align: center; }
+    .info-pill .pill-val { font-size: 20px; font-weight: 700; color: #c9a84c; }
+    .info-pill .pill-key { font-size: 11px; color: #666; letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+
+    .fee-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 15px; }
+    .fee-table th { text-align: left; padding: 12px 14px; font-size: 11px; letter-spacing: 2px; color: #666; text-transform: uppercase; border-bottom: 0.5px solid #2a2a2a; font-weight: 500; }
+    .fee-table td { padding: 12px 14px; color: #999; border-bottom: 0.5px solid #1a1a1a; }
+    .fee-table td:last-child { color: #c9a84c; font-weight: 700; text-align: right; white-space: nowrap; }
+    .fee-table tr:last-child td { border-bottom: none; }
+
+    .action-box { background: #0f0c03; border: 0.5px solid #3a2e10; border-radius: 10px; padding: 20px 24px; margin-top: 20px; }
+    .action-box h4 { font-size: 13px; color: #c9a84c; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    .action-box p { font-size: 15px; color: #999; line-height: 1.65; }
+    .action-box a { color: #c9a84c; text-decoration: none; }
+    .action-box a:hover { text-decoration: underline; }
+
+    .warning-box { background: #1a1000; border: 0.5px solid #4a3000; border-radius: 10px; padding: 20px 24px; margin-top: 20px; }
+    .warning-box h4 { font-size: 13px; color: #f0a500; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    .warning-box p { font-size: 15px; color: #999; line-height: 1.65; }
+    .warning-box a { color: #f0a500; text-decoration: none; }
+
+    .tip-box { background: #0a1a0a; border: 0.5px solid #2a4a2a; border-radius: 10px; padding: 20px 24px; margin-top: 20px; }
+    .tip-box h4 { font-size: 13px; color: #4caf50; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    .tip-box p { font-size: 15px; color: #999; line-height: 1.65; }
+
+    .checklist { list-style: none; margin-top: 16px; }
+    .checklist li { font-size: 15px; color: #999; padding: 10px 0; border-bottom: 0.5px solid #1a1a1a; display: flex; align-items: flex-start; gap: 12px; line-height: 1.6; }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li::before { content: "→"; color: #c9a84c; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+    .ongoing-section { background: #0f0c03; border-top: 0.5px solid #1e1a08; border-bottom: 0.5px solid #1e1a08; padding: 72px 40px; }
+    .ongoing-inner { max-width: 860px; margin: 0 auto; }
+    .ongoing-inner h2 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+    .ongoing-inner > p { font-size: 17px; color: #999; margin-bottom: 40px; line-height: 1.65; }
+    .ongoing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .ongoing-card { background: #111; border: 0.5px solid #2a2a2a; border-radius: 12px; padding: 28px 24px; }
+    .ongoing-card h3 { font-size: 17px; font-weight: 500; color: #c9a84c; margin-bottom: 12px; }
+    .ongoing-card p { font-size: 15px; color: #999; line-height: 1.7; }
+    .ongoing-card .fee-tag { display: inline-block; background: #1a1400; border: 0.5px solid #c9a84c; color: #c9a84c; font-size: 12px; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+
+    .cta-section { padding: 80px 40px; text-align: center; border-top: 0.5px solid #1a1a1a; }
+    .cta-section h2 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+    .cta-section p { font-size: 17px; color: #999; margin-bottom: 40px; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cta-btn { background: #c9a84c; color: #0a0a0a; font-size: 15px; font-weight: 700; padding: 16px 36px; border-radius: 6px; border: none; cursor: pointer; letter-spacing: 1px; text-transform: uppercase; font-family: inherit; text-decoration: none; display: inline-block; }
+    .cta-btn:hover { background: #e2bf6a; }
+    .cta-btn-outline { background: transparent; color: #c9a84c; font-size: 15px; font-weight: 700; padding: 16px 36px; border-radius: 6px; border: 0.5px solid #c9a84c; cursor: pointer; letter-spacing: 1px; text-transform: uppercase; font-family: inherit; text-decoration: none; display: inline-block; }
+    .cta-btn-outline:hover { background: #1a1400; }
+
+    footer { padding: 28px 40px; text-align: center; border-top: 0.5px solid #1a1a1a; }
+    footer p { font-size: 12px; color: #333; letter-spacing: 1px; }
+
+    @media (max-width: 700px) {
+      .ltb-nav { padding: 0 20px; }
+      .ltb-cta { display: none; }
+      .hero { padding: 60px 24px 40px; }
+      .hero h1 { font-size: 32px; }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      .what-section, .steps-section { padding: 52px 24px; }
+      .pro-con { grid-template-columns: 1fr; }
+      .agency-grid { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: 1fr 1fr; }
+      .fee-table { font-size: 14px; }
+      .fee-table th, .fee-table td { padding: 10px 8px; }
+      .ongoing-section { padding: 52px 24px; }
+      .ongoing-grid { grid-template-columns: 1fr; }
+      .step-card { padding: 28px 20px; }
+      .cta-section { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- UNIVERSAL NAV -->
+  <nav class="ltb-nav">
+    <a class="ltb-logo" href="index.html">LEARN THE BIZ</a>
+    <div class="ltb-links">
+      <div class="ltb-item"><a class="ltb-item-btn" href="index.html">Home</a></div>
+      <div class="ltb-item" id="nav-learn">
+        <button class="ltb-item-btn">Learn <span class="ltb-arrow">▼</span></button>
+        <div class="ltb-drop">
+          <div class="ltb-drop-label">Business Types</div>
+          <a class="ltb-drop-item" href="learn.html?panel=llc">Find My Business Type</a>
+          <a class="ltb-drop-item" href="learn.html?panel=llc">LLC — What It Is</a>
+          <a class="ltb-drop-item" href="learn.html?panel=scorp">S-Corp — What It Is</a>
+          <a class="ltb-drop-item" href="learn.html?panel=ccorp">C-Corp — What It Is</a>
+          <a class="ltb-drop-item" href="learn.html?panel=sole">Sole Proprietorship — What It Is</a>
+          <a class="ltb-drop-item" href="learn.html?panel=partnership">Partnership — What It Is</a>
+          <a class="ltb-drop-item" href="learn.html?panel=nonprofit">Nonprofit — What It Is</a>
+          <div class="ltb-drop-divider"></div>
+          <div class="ltb-drop-label">Quiz</div>
+          <a class="ltb-drop-item" href="learn.html#quiz">Help Me Choose My Business Type</a>
+        </div>
+      </div>
+      <div class="ltb-item" id="nav-taxes">
+        <button class="ltb-item-btn">Taxes <span class="ltb-arrow">▼</span></button>
+        <div class="ltb-drop">
+          <div class="ltb-drop-label">Select Business Type</div>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-tax-llc')">LLC Taxes <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-tax-llc"><div class="ltb-sub-header">Select Your State</div><a href="tax-michigan.html#llc">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-tax-scorp')">S-Corp Taxes <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-tax-scorp"><div class="ltb-sub-header">Select Your State</div><a href="tax-michigan.html#scorp">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-tax-ccorp')">C-Corp Taxes <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-tax-ccorp"><div class="ltb-sub-header">Select Your State</div><a href="tax-michigan.html#ccorp">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-tax-sole')">Sole Prop Taxes <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-tax-sole"><div class="ltb-sub-header">Select Your State</div><a href="tax-michigan.html#sole">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-tax-partner')">Partnership Taxes <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-tax-partner"><div class="ltb-sub-header">Select Your State</div><a href="tax-michigan.html#partnership">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-tax-nonprofit')">Nonprofit Taxes <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-tax-nonprofit"><div class="ltb-sub-header">Select Your State</div><a href="tax-michigan.html#nonprofit">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+        </div>
+      </div>
+      <div class="ltb-item" id="nav-form">
+        <button class="ltb-item-btn">Start Forming <span class="ltb-arrow">▼</span></button>
+        <div class="ltb-drop">
+          <div class="ltb-drop-label">Choose Your Structure</div>
+
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-llc')">Form an LLC <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-llc"><div class="ltb-sub-header">Select Your State</div><a href="llc-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-scorp')">Form an S-Corp <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-scorp"><div class="ltb-sub-header">Select Your State</div><a href="scorp-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-ccorp')">Form a C-Corp <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-ccorp"><div class="ltb-sub-header">Select Your State</div><a href="ccorp-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-sole')">Sole Proprietorship <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-sole"><div class="ltb-sub-header">Select Your State</div><a href="sole-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-partner')">Partnership <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-partner"><div class="ltb-sub-header">Select Your State</div><a href="partnership-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-nonprofit')">Nonprofit <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-nonprofit"><div class="ltb-sub-header">Select Your State</div><a href="nonprofit-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+
+        </div>
+      </div>
+      <a class="ltb-cta" href="learn.html">Find My Business Type</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="state-badge">Michigan Nonprofit Guide</div>
+    <h1>How to Start a Nonprofit<br><span>in Michigan</span></h1>
+    <div class="gold-line"></div>
+    <p>This one takes three agencies, not one. Here is the complete path from incorporation to 501(c)(3) to legally accepting your first donation. All information verified from official Michigan and IRS sources.</p>
+  </section>
+
+  <!-- QUICK STATS -->
+  <div class="stats-bar">
+    <div class="stat"><div class="num">$20</div><div class="lbl">Michigan Filing Fee</div></div>
+    <div class="stat"><div class="num">$275</div><div class="lbl">IRS Fee — Short Form</div></div>
+    <div class="stat"><div class="num">3</div><div class="lbl">Directors Minimum</div></div>
+    <div class="stat"><div class="num">Oct 1</div><div class="lbl">Annual Report Due</div></div>
+  </div>
+
+  <!-- WHAT IS A NONPROFIT -->
+  <div class="what-section">
+    <div class="section-tag">Before You Start</div>
+    <h2>What is a nonprofit and is it right for you?</h2>
+    <p>A nonprofit is an organization built to serve a public purpose rather than to make money for owners. The word "nonprofit" throws people off, so let's clear it up: a nonprofit absolutely can and should earn more than it spends. What it cannot do is distribute that surplus to owners, because it has no owners. Every dollar left over goes back into the mission.</p>
+    <p>The most important thing to understand before you start is that "nonprofit" and "501(c)(3)" are two different things obtained from two different places. Michigan makes you a nonprofit corporation when LARA accepts your Articles of Incorporation. Only the IRS can make you tax-exempt, and that is a separate application with a separate fee that can take months. Being one does not make you the other.</p>
+    <p>The other thing nobody warns first-time founders about: you are giving up control. A nonprofit is governed by a board of directors, and Michigan requires at least three. The board can outvote you, and in a properly run nonprofit, it can remove you. If the idea of a board with real authority over your work bothers you, a nonprofit is the wrong structure.</p>
+    <div class="pro-con">
+      <div class="pro-box">
+        <h4>✓ Pros of a Nonprofit</h4>
+        <ul>
+          <li>Exempt from federal income tax once the IRS approves 501(c)(3)</li>
+          <li>Donors can deduct their contributions, which makes asking far easier</li>
+          <li>Eligible for foundation and government grants closed to businesses</li>
+          <li>Exempt from Michigan sales tax on qualifying purchases</li>
+          <li>Directors and officers get liability protection</li>
+          <li>Discounted nonprofit rates on software, advertising, and postage</li>
+          <li>Exists independently of any one founder</li>
+        </ul>
+      </div>
+      <div class="con-box">
+        <h4>✗ Things to Know</h4>
+        <ul>
+          <li>You do not own it and you cannot sell it</li>
+          <li>A board of at least three directors governs the organization, not you</li>
+          <li>Surplus cannot be distributed to founders, only reinvested</li>
+          <li>The 501(c)(3) application costs $275 or $600 and takes months</li>
+          <li>Finances and Form 990 filings are public record</li>
+          <li>Strict limits on lobbying and an absolute ban on campaign activity</li>
+          <li>Three agencies to keep happy: LARA, the IRS, and the Attorney General</li>
+          <li>Miss three years of Form 990 and exempt status is revoked automatically</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- THREE AGENCIES -->
+  <div class="what-section">
+    <div class="section-tag">The Part That Confuses Everyone</div>
+    <h2>Three agencies, three separate jobs.</h2>
+    <p>Every other structure on this site involves one agency. A nonprofit involves three, each doing something the others do not. People routinely finish one, assume they are done, and start fundraising illegally or lose their exemption. Here is who does what.</p>
+    <div class="agency-grid">
+      <div class="agency-card">
+        <div class="agency-tag">Agency 1 — State</div>
+        <h3>Michigan LARA</h3>
+        <p>Creates the legal entity. You file Articles of Incorporation and Michigan recognizes your nonprofit corporation. This gives you liability protection and legal existence. It does not make you tax-exempt.</p>
+        <div class="agency-fee">$20 to file</div>
+      </div>
+      <div class="agency-card">
+        <div class="agency-tag">Agency 2 — Federal</div>
+        <h3>The IRS</h3>
+        <p>Grants tax-exempt status. You apply on Form 1023 or Form 1023-EZ for recognition as a 501(c)(3). This is what makes you exempt from federal income tax and makes donations deductible for your donors.</p>
+        <div class="agency-fee">$275 or $600</div>
+      </div>
+      <div class="agency-card">
+        <div class="agency-tag">Agency 3 — State</div>
+        <h3>Michigan Attorney General</h3>
+        <p>Licenses you to ask for money. Michigan requires most charities to register with the AG's Charitable Trust Section before soliciting or receiving donations from the public. Renewed every year.</p>
+        <div class="agency-fee">Free to register</div>
+      </div>
+    </div>
+    <div class="warning-box">
+      <h4>⚠ You Can Be Incorporated and Still Not Allowed to Fundraise</h4>
+      <p>This is the single most common mistake. Michigan incorporation and IRS exemption do not give you permission to solicit donations. That comes from the Attorney General separately. Organizations regularly fundraise for months before discovering they needed to register, and it is a compliance problem that surfaces exactly when a grantmaker starts doing diligence on you.</p>
+    </div>
+  </div>
+
+  <!-- STEPS -->
+  <div class="steps-section">
+    <div class="section-tag">The Playbook</div>
+    <h2>Step-by-Step: Start Your Michigan Nonprofit</h2>
+    <p>Eleven steps across three agencies. Order matters more here than on any other guide — step four contains language the state's own form leaves out, and getting it wrong means redoing your IRS application. Work straight through.</p>
+
+    <!-- STEP 1 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">1</div>
+        <div class="step-title-wrap"><div class="step-sub">Step One</div><h3>Make Sure a Nonprofit Is Actually What You Need</h3></div>
+      </div>
+      <div class="step-body">
+        <p>A lot of people start here because they want to do good work, and they assume a nonprofit is how you do good work. It is not the only way, and it is the most heavily regulated way. Be sure the structure fits before you spend months on paperwork.</p>
+        <p>The IRS recognizes 501(c)(3) organizations formed for charitable, religious, educational, scientific, or literary purposes, plus testing for public safety, fostering amateur sports, and preventing cruelty to children or animals. Your mission needs to fit one of those categories and genuinely serve the public rather than any private individual.</p>
+        <ul class="checklist">
+          <li>Your mission fits an IRS-recognized exempt purpose</li>
+          <li>You are comfortable with a board of at least three people who can overrule you</li>
+          <li>You accept that you will never own or be able to sell the organization</li>
+          <li>You plan to fund the work through donations or grants rather than sales alone</li>
+          <li>You are prepared for annual filings with three separate agencies</li>
+          <li>You can find at least two other people willing to serve on the board</li>
+        </ul>
+        <div class="tip-box">
+          <h4>💡 Consider Fiscal Sponsorship First</h4>
+          <p>If you want to start doing the work now and are not ready for months of paperwork and hundreds in fees, look into fiscal sponsorship. An existing 501(c)(3) takes your project under its umbrella, so donations to your work are tax-deductible immediately through them. Sponsors typically take 5–10% of funds raised. Many well-known nonprofits spent their first years this way before incorporating on their own.</p>
+        </div>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Write your mission statement in one or two sentences, then check it against the exempt purposes listed at <a href="https://www.irs.gov/charities-non-profits/charitable-organizations" target="_blank">irs.gov — Charitable Organizations</a>. If it does not clearly fit, talk to a nonprofit attorney before filing anything. Also search existing Michigan nonprofits doing similar work — joining or partnering with one is often better than starting from zero.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">2</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Two</div><h3>Name Your Nonprofit and Appoint a Resident Agent</h3></div>
+      </div>
+      <div class="step-body">
+        <p>Your name has to be distinguishable from every other entity registered in Michigan. Nonprofits are not required to include "Inc." or "Corporation," though many choose to. Avoid anything implying a purpose you are not organized to carry out.</p>
+        <p>You also need a resident agent — the person or company designated to receive legal documents for the organization. The requirements are the same as for any Michigan corporation: a physical Michigan street address, staffed during business hours, no P.O. boxes.</p>
+        <ul class="checklist">
+          <li>Must be distinguishable from existing Michigan entities</li>
+          <li>Corporate suffixes are optional for nonprofits</li>
+          <li>Search the federal trademark database before committing to branding</li>
+          <li>Confirm the .org domain is available — donors expect .org</li>
+          <li>Resident agent needs a physical Michigan street address, not a P.O. box</li>
+          <li>Your organization cannot serve as its own resident agent on AG filings</li>
+        </ul>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Search your name free at <a href="https://mibusinessregistry.lara.state.mi.us" target="_blank">mibusinessregistry.lara.state.mi.us</a> and grab the .org domain the same day. Decide who your resident agent will be now, because their name and address go on the Articles. If nobody wants their home address in a public database, use a commercial resident agent service.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">3</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Three</div><h3>Recruit Your Board of Directors</h3></div>
+      </div>
+      <div class="step-body">
+        <p>Michigan law requires a nonprofit corporation to have at least three directors. There are narrow exceptions — a private foundation, for instance, may have one — but for a normal charitable nonprofit, three is the floor. The IRS also wants to see a real board, and it looks closely at whether the directors are independent of each other.</p>
+        <p>That independence matters more than people expect. A board made up of you, your spouse, and your brother technically satisfies Michigan's count but raises immediate questions on your 501(c)(3) application, because the IRS is checking whether the organization can actually hold its leadership accountable. Unrelated directors make the application go smoothly.</p>
+        <p>Michigan also requires officers: a president, a secretary, and a treasurer. One person may hold more than one office, though the treasurer and president roles are best kept separate for financial oversight.</p>
+        <ul class="checklist">
+          <li>Minimum of three directors under Michigan law</li>
+          <li>Directors should be unrelated by blood, marriage, or business ties where possible</li>
+          <li>An odd number avoids deadlocked votes</li>
+          <li>President, secretary, and treasurer are required officers</li>
+          <li>No Michigan residency requirement for directors</li>
+          <li>Recruit for what you lack — accounting, legal, fundraising, or subject expertise</li>
+        </ul>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Line up at least three directors before you file, since their names go into your organizational meeting minutes and your IRS application. Be direct with recruits about the time commitment and the legal responsibility they are accepting. Write down each person's name, address, and what they bring to the board.</p>
+        </div>
+        <div class="warning-box">
+          <h4>⚠ A Board of Relatives Will Slow Down Your Application</h4>
+          <p>The IRS specifically asks about family and business relationships among your directors and officers on Form 1023. A board where a majority are related to each other invites scrutiny about whether the organization serves the public or a private family interest. It is not automatically disqualifying, but it turns a routine approval into a slow one.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">4</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Four</div><h3>File Your Articles of Incorporation</h3></div>
+      </div>
+      <div class="step-body">
+        <p>This is Form 502, Articles of Incorporation for a Domestic Nonprofit Corporation, filed with LARA for $20. Your nonprofit corporation legally exists the moment the state accepts it.</p>
+        <p>Now the most important paragraph on this page. <strong style="color:#e0e0e0;">Michigan's Form 502 template contains only the minimum the state requires. It does not contain the language the IRS requires for 501(c)(3) status.</strong> If you fill out the blank form and file it as-is, Michigan will happily accept it, and then the IRS will reject your exemption application or make you amend the Articles and refile. This costs people months.</p>
+        <p>Two specific provisions have to be added. A purpose clause stating the organization is organized exclusively for exempt purposes under Section 501(c)(3) of the Internal Revenue Code. And a dissolution clause stating that if the organization shuts down, its remaining assets go to another 501(c)(3) or to a government entity, never to members, directors, or officers.</p>
+        <div class="info-grid">
+          <div class="info-pill"><div class="pill-val">$20</div><div class="pill-key">Filing Fee</div></div>
+          <div class="info-pill"><div class="pill-val">Form 502</div><div class="pill-key">Articles of Incorporation</div></div>
+          <div class="info-pill"><div class="pill-val">3</div><div class="pill-key">Directors Minimum</div></div>
+        </div>
+        <div class="warning-box">
+          <h4>⚠ Add the IRS Language Before You File, Not After</h4>
+          <p>The state form gives you space to attach additional provisions, and this is exactly what that space is for. Adding the purpose and dissolution clauses now costs you nothing. Discovering they are missing after you have paid the IRS $275 or $600 costs you an amendment filing, another wait, and possibly a second application. The IRS publishes suggested language in the Form 1023 instructions — use it.</p>
+        </div>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Download Form 502 from <a href="https://www.michigan.gov/lara" target="_blank">michigan.gov/lara</a> and read the Form 1023 instructions at <a href="https://www.irs.gov/forms-pubs/about-form-1023" target="_blank">irs.gov</a> side by side before filling anything out. Add both required clauses as an attachment. File online at <a href="https://mibusinessregistry.lara.state.mi.us" target="_blank">mibusinessregistry.lara.state.mi.us</a>. If your budget allows one professional review anywhere in this process, spend it here.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">5</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Five</div><h3>Adopt Bylaws and a Conflict of Interest Policy</h3></div>
+      </div>
+      <div class="step-body">
+        <p>Bylaws are your organization's operating rules. They are not filed with the state, but you must keep them at your principal office, and the IRS will ask for them with your exemption application.</p>
+        <p>The conflict of interest policy is separate and is not optional in practice. Form 1023 asks directly whether you have adopted one. The IRS publishes a sample policy in the Form 1023 instructions, and adopting something close to it is the path of least resistance. It governs what happens when a director or officer stands to benefit personally from a decision the organization is making.</p>
+        <ul class="checklist">
+          <li><strong style="color:#e0e0e0;">Board composition</strong> — number of directors, how they are elected, term lengths</li>
+          <li><strong style="color:#e0e0e0;">Officer roles</strong> — president, secretary, treasurer, and their duties</li>
+          <li><strong style="color:#e0e0e0;">Meetings</strong> — how often the board meets, notice requirements, quorum</li>
+          <li><strong style="color:#e0e0e0;">Voting</strong> — what margin passes a decision, whether written consent is allowed</li>
+          <li><strong style="color:#e0e0e0;">Membership structure</strong> — whether you are organized on a membership or directorship basis</li>
+          <li><strong style="color:#e0e0e0;">Conflict of interest policy</strong> — disclosure, recusal, and documentation of interested transactions</li>
+          <li><strong style="color:#e0e0e0;">Committees</strong> — what committees exist and what authority they hold</li>
+          <li><strong style="color:#e0e0e0;">Amendment process</strong> — how the bylaws themselves get changed</li>
+        </ul>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Draft your bylaws before the organizational meeting, since the board adopts them there. Pull the sample conflict of interest policy from the Form 1023 instructions and adapt it rather than writing one from scratch. Have a nonprofit attorney review both if you can afford it — bylaws that contradict your Articles cause real problems later.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 6 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">6</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Six</div><h3>Hold Your Organizational Meeting</h3></div>
+      </div>
+      <div class="step-body">
+        <p>This is the meeting where your paper organization becomes a functioning one. The minutes from it are part of your permanent record and the IRS may ask to see them, so write them properly and have them signed.</p>
+        <ul class="checklist">
+          <li>Formally adopt the bylaws</li>
+          <li>Adopt the conflict of interest policy and have each director sign a disclosure</li>
+          <li>Elect the officers — president, secretary, treasurer</li>
+          <li>Authorize opening a bank account and designate who can sign</li>
+          <li>Set the organization's fiscal year, which determines your filing deadlines</li>
+          <li>Approve applying for 501(c)(3) status and authorize who will sign the application</li>
+          <li>Approve an initial budget</li>
+          <li>Record and sign minutes documenting every decision above</li>
+        </ul>
+        <div class="tip-box">
+          <h4>💡 Choose Your Fiscal Year Deliberately</h4>
+          <p>Your fiscal year sets your Form 990 deadline and your Attorney General renewal date. A calendar year ending December 31 is simplest and what most small nonprofits choose. If your funding cycle is tied to a school year or a grant cycle, a different fiscal year may make reporting easier. Decide once, at this meeting, and write it into the minutes.</p>
+        </div>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Hold the meeting with all directors present, work through the list above in order, and have the secretary produce signed minutes. Start a records binder containing your Articles, bylaws, conflict policy, signed disclosures, and these minutes. You will need to pull from it repeatedly over the next few months.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 7 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">7</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Seven</div><h3>Get Your EIN (Federal Tax ID)</h3></div>
+      </div>
+      <div class="step-body">
+        <p>Every nonprofit needs an EIN, and you need it before you can apply for 501(c)(3) status or open a bank account. Apply after your Articles are approved, using the organization's exact legal name as filed with Michigan.</p>
+        <ul class="checklist">
+          <li>Required for every nonprofit, with or without employees</li>
+          <li>Required to file Form 1023 or 1023-EZ</li>
+          <li>Required to open a bank account in the organization's name</li>
+          <li>Free and instant from the IRS — about 10 minutes online</li>
+          <li>An officer applies as the responsible party using their own SSN</li>
+        </ul>
+        <div class="info-grid">
+          <div class="info-pill"><div class="pill-val">Free</div><div class="pill-key">No Cost Ever</div></div>
+          <div class="info-pill"><div class="pill-val">Instant</div><div class="pill-key">Online Application</div></div>
+          <div class="info-pill"><div class="pill-val">IRS.gov</div><div class="pill-key">Only Official Source</div></div>
+        </div>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Apply free at <a href="https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online" target="_blank">irs.gov — Apply for EIN Online</a>, Monday–Friday 7am–10pm Eastern. Use your exact incorporated name. Save the confirmation letter in your records binder — you will need the number on nearly every form that follows.</p>
+        </div>
+        <div class="warning-box">
+          <h4>⚠ Getting an EIN Does Not Make You Tax-Exempt</h4>
+          <p>An EIN is just an identification number. Plenty of new nonprofits get one, see "IRS" on the letter, and believe they are now a 501(c)(3). They are not. Exemption comes only from an approved Form 1023 or 1023-EZ and arrives as a determination letter. Do not tell donors their gifts are deductible until you have that letter.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 8 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">8</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Eight</div><h3>Apply for 501(c)(3) Tax-Exempt Status</h3></div>
+      </div>
+      <div class="step-body">
+        <p>This is the big one. You are asking the IRS to formally recognize your organization as exempt from federal income tax and to allow your donors to deduct their gifts. There are two forms and the difference between them is substantial.</p>
+        <table class="fee-table">
+          <tr><th>Form</th><th>Who It's For</th><th>User Fee</th></tr>
+          <tr><td>Form 1023-EZ</td><td>Small organizations meeting all eligibility tests</td><td>$275</td></tr>
+          <tr><td>Form 1023</td><td>Everyone else — the full application</td><td>$600</td></tr>
+        </table>
+        <p>To use the cheaper 1023-EZ, your projected annual gross receipts must stay at or under $50,000 for each of the next three years, your total assets must be $250,000 or less, and you must answer no to every question on a 30-question eligibility worksheet in the instructions. A single yes pushes you to the full Form 1023 at $600. Churches, schools, and hospitals must always file the full version.</p>
+        <p>Both forms are filed electronically through Pay.gov, and the fee is paid when you submit. The full Form 1023 asks for a narrative description of your activities, three years of financial projections, your Articles, your bylaws, your conflict of interest policy, and details on every director and officer.</p>
+        <div class="warning-box">
+          <h4>⚠ The 27-Month Window</h4>
+          <p>Apply within 27 months of the end of the month you incorporated and, if approved, your exempt status is retroactive to your formation date — meaning donations from day one are deductible. Miss that window and exemption generally starts from your application date instead, leaving a gap where gifts your donors already claimed were not actually deductible. Apply early.</p>
+        </div>
+        <div class="tip-box">
+          <h4>💡 Do Not Choose the Form Based on Price</h4>
+          <p>The $325 difference is tempting, but filing a 1023-EZ you are not eligible for is worse than paying more. The IRS can cash the fee and then deny you, or approve you and revisit it later when your Form 990 shows receipts above what you projected. Work through the eligibility worksheet honestly before deciding.</p>
+        </div>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Complete the eligibility worksheet in the Form 1023-EZ instructions first — it decides which form you file. Then apply at <a href="https://www.pay.gov" target="_blank">pay.gov</a>. Confirm the current user fees at <a href="https://www.irs.gov/charities-non-profits/user-fees-for-tax-exempt-and-government-entities-division" target="_blank">irs.gov</a> before submitting, since the IRS updates them periodically. Save your Pay.gov confirmation, a copy of what you submitted, and every notice the IRS sends.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 9 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">9</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Nine</div><h3>Register With the Michigan Attorney General</h3></div>
+      </div>
+      <div class="step-body">
+        <p>This is the step almost every guide skips and almost every new Michigan nonprofit forgets. Under Michigan's Charitable Organizations and Solicitations Act, an organization that solicits or receives charitable contributions in Michigan must register with the Attorney General's Charitable Trust Section.</p>
+        <p>"Soliciting" is broader than people assume. Mail, phone calls, events, a donate button on your website, a social media fundraiser, or simply receiving contributions without actively asking — all of it counts. Registration is free, which makes skipping it particularly pointless.</p>
+        <p>You file Form CTS-01, the Initial Solicitation Form, along with your Articles, bylaws, and IRS determination letter if you have it. Your registration expires seven months after the close of your fiscal year, and renewal on Form CTS-02 is due 30 days before that expiration.</p>
+        <ul class="checklist">
+          <li><strong style="color:#e0e0e0;">CTS-01</strong> — Initial Solicitation Form, for first-time registration</li>
+          <li><strong style="color:#e0e0e0;">CTS-02</strong> — Renewal Solicitation Form, due 30 days before expiration each year</li>
+          <li><strong style="color:#e0e0e0;">CTS-03</strong> — Request for Exemption, if you believe you qualify</li>
+          <li><strong style="color:#e0e0e0;">CTS-05</strong> — Registration and Inventory Form, which most Michigan organizations filing for exemption must also submit</li>
+          <li>A Michigan resident agent must be named, with a street address, and the organization cannot name itself</li>
+          <li>Larger organizations must submit reviewed or audited financial statements — thresholds are set by statute, so check the current CTS-01 instructions</li>
+        </ul>
+        <div class="tip-box">
+          <h4>💡 The Small Organization Exemption</h4>
+          <p>An organization that receives less than $25,000 in contributions in a 12-month period and pays nobody for fundraising services may be exempt from registration. Do not simply assume it applies to you. File Form CTS-03 and get written confirmation from the Charitable Trust Section, because an assumed exemption is worth nothing when a grantmaker asks for proof of registration.</p>
+        </div>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Register before you accept your first dollar. Get the forms at <a href="https://www.michigan.gov/consumerprotection/charities/charitable-organizations" target="_blank">michigan.gov — Charitable Organizations</a>. There is no fee. Put your renewal date in a calendar the day you register, since it is keyed to your fiscal year rather than a fixed date and is easy to lose track of.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 10 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">10</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Ten</div><h3>Open a Bank Account and Set Up Your Finances</h3></div>
+      </div>
+      <div class="step-body">
+        <p>Nonprofit money is other people's money given for a stated purpose, which raises the stakes on clean bookkeeping considerably. Your finances will also be public once you start filing Form 990.</p>
+        <p>Set up dual controls from the beginning. The person who writes checks should not be the same person who reconciles the account. In a small nonprofit that usually means the treasurer reviews what the executive director spends, and the board sees financial reports at every meeting.</p>
+        <ul class="checklist">
+          <li>Your endorsed Articles of Incorporation from LARA</li>
+          <li>Your EIN confirmation letter</li>
+          <li>Your adopted bylaws</li>
+          <li>The board resolution authorizing the account and naming signers</li>
+          <li>Your IRS determination letter, once you have it</li>
+          <li>Photo ID for each authorized signer</li>
+        </ul>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Open a nonprofit checking account — many Michigan credit unions and banks waive fees for registered nonprofits, so ask. Set up accounting software; TechSoup offers deeply discounted QuickBooks to verified nonprofits, and Wave is free. Track restricted versus unrestricted funds separately from day one, because donors who give for a specific purpose are legally entitled to have it used that way. Once your determination letter arrives, apply for Michigan sales tax exemption on purchases using Form 3372.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 11 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">11</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Eleven</div><h3>Understand Your Ongoing Obligations</h3></div>
+      </div>
+      <div class="step-body">
+        <p>A 501(c)(3) is exempt from federal income tax on money related to its mission, and Michigan nonprofits are generally not subject to the Michigan Corporate Income Tax. Exempt does not mean you stop filing. It means you file different things.</p>
+        <p>The annual federal filing is a Form 990, and which version depends on your size. This is the filing that gets nonprofits into trouble, because missing it three years running triggers automatic revocation of exempt status with no warning and no appeal.</p>
+        <table class="fee-table">
+          <tr><th>Your Gross Receipts</th><th>Form You File</th><th>Fee</th></tr>
+          <tr><td>Normally $50,000 or less</td><td>Form 990-N (e-Postcard)</td><td>$0</td></tr>
+          <tr><td>Under $200,000, assets under $500,000</td><td>Form 990-EZ</td><td>$0</td></tr>
+          <tr><td>$200,000 or more, or assets $500,000+</td><td>Form 990</td><td>$0</td></tr>
+        </table>
+        <ul class="checklist">
+          <li><strong style="color:#e0e0e0;">Form 990 series</strong> — due the 15th day of the fifth month after your fiscal year ends, so May 15 for calendar-year organizations</li>
+          <li><strong style="color:#e0e0e0;">Michigan annual report</strong> — $20, due October 1 each year beginning the year after you incorporate</li>
+          <li><strong style="color:#e0e0e0;">Attorney General renewal</strong> — Form CTS-02, free, due 30 days before your registration expires</li>
+          <li><strong style="color:#e0e0e0;">Payroll taxes</strong> — if you have employees, you still withhold and remit like any employer</li>
+          <li><strong style="color:#e0e0e0;">Unrelated business income</strong> — income from activities unrelated to your mission is taxable and reported on Form 990-T</li>
+          <li><strong style="color:#e0e0e0;">Public disclosure</strong> — your Form 990 and determination letter must be available to anyone who asks</li>
+        </ul>
+        <div class="warning-box">
+          <h4>⚠ Three Missed 990s and Your Exemption Is Gone</h4>
+          <p>Fail to file for three consecutive years and the IRS automatically revokes your tax-exempt status. There is no grace period and no appeal of the revocation itself. Getting reinstated means a new application and a new user fee, and donations received while you were revoked may not have been deductible. Even the smallest organizations filing the free 990-N must file it every single year.</p>
+        </div>
+        <div class="tip-box">
+          <h4>💡 Political Activity Is the Other Way to Lose Everything</h4>
+          <p>A 501(c)(3) is absolutely prohibited from supporting or opposing candidates for public office. Not limited — prohibited. Lobbying on legislation is allowed but only in insubstantial amounts. Violating the campaign prohibition can cost you your exemption outright, so make sure your board understands the line before an election year.</p>
+        </div>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Put all three annual deadlines in a shared calendar the week you incorporate: your Form 990 date, October 1 for the Michigan annual report, and your AG renewal date. Find a CPA experienced with nonprofits before your first fiscal year closes. Nonprofit accounting has its own rules around restricted funds and functional expense allocation, and a general small-business accountant will not know them.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ONGOING REQUIREMENTS -->
+  <div class="ongoing-section">
+    <div class="ongoing-inner">
+      <div class="section-tag">Stay On Track</div>
+      <h2>Ongoing Requirements</h2>
+      <p>Three agencies, three sets of deadlines. Miss the wrong one and you lose either your corporate existence or your tax exemption.</p>
+      <div class="ongoing-grid">
+        <div class="ongoing-card">
+          <div class="fee-tag">Annual — $20 — October 1</div>
+          <h3>Michigan Annual Report</h3>
+          <p>File with LARA on or before October 1 every year, starting the year after you incorporate. Fail to file within two years of the due date and the corporation automatically dissolves by operation of law. Restoring it means filing up to five years of back reports plus a $5 penalty for each one.</p>
+        </div>
+        <div class="ongoing-card">
+          <div class="fee-tag">Annual — Free</div>
+          <h3>Federal Form 990</h3>
+          <p>Due the 15th day of the fifth month after your fiscal year ends. Which version depends on your size, but every 501(c)(3) files something every year. Three consecutive misses means automatic revocation of exempt status.</p>
+        </div>
+        <div class="ongoing-card">
+          <div class="fee-tag">Annual — Free</div>
+          <h3>Attorney General Renewal</h3>
+          <p>File Form CTS-02 at least 30 days before your registration expires, which is seven months after the close of your fiscal year. Your registration stays valid while the renewal is pending. Let it lapse and you are soliciting without authorization.</p>
+        </div>
+        <div class="ongoing-card">
+          <div class="fee-tag">Ongoing</div>
+          <h3>Board Meetings and Minutes</h3>
+          <p>Hold regular board meetings and keep written minutes of every one. This is both a Michigan requirement and the evidence that your organization is genuinely board-governed rather than one person's project.</p>
+        </div>
+        <div class="ongoing-card">
+          <div class="fee-tag">Ongoing</div>
+          <h3>Donor Acknowledgments</h3>
+          <p>Donors need a written receipt from you to claim gifts of $250 or more. Send acknowledgments promptly and state whether the donor received anything of value in return. It is a legal requirement and it is also good donor relations.</p>
+        </div>
+        <div class="ongoing-card">
+          <div class="fee-tag">Ongoing</div>
+          <h3>Restricted Fund Tracking</h3>
+          <p>Money given for a specific program must be spent on that program. Track restricted and unrestricted funds separately in your books all year, not at filing time. Misusing restricted funds is one of the fastest ways to attract the Attorney General's attention.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="section-tag" style="text-align:center;">You're Ready</div>
+    <h2>That's your complete Michigan Nonprofit playbook.</h2>
+    <p>Incorporate with the right language, apply to the IRS within 27 months, and register with the AG before you fundraise. Ready to dig into the tax side?</p>
+    <div class="cta-btns">
+      <a class="cta-btn" href="tax-michigan.html#nonprofit" target="_blank">Michigan Nonprofit Tax Guide</a>
+      <a class="cta-btn-outline" href="learn.html#quiz">Compare Business Types</a>
+      <a class="cta-btn-outline" href="index.html">Back to Home</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Learn The Biz &middot; All Rights Reserved &middot; Information verified from official Michigan and IRS sources</p>
+  </footer>
+
+  <script>
+    (function() {
+      var hoverDelay = 150;
+      var closeTimer = {};
+      var items = document.querySelectorAll('.ltb-item');
+      items.forEach(function(item) {
+        var id = item.id || Math.random();
+        item.addEventListener('mouseenter', function() {
+          clearTimeout(closeTimer[id]);
+          items.forEach(function(i) { if (i !== item) i.classList.remove('open'); });
+          item.classList.add('open');
+        });
+        item.addEventListener('mouseleave', function() {
+          closeTimer[id] = setTimeout(function() { item.classList.remove('open'); }, hoverDelay);
+        });
+        var btn = item.querySelector('.ltb-item-btn');
+        if (btn && btn.tagName === 'BUTTON') {
+          btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var isOpen = item.classList.contains('open');
+            items.forEach(function(i) { i.classList.remove('open'); });
+            if (!isOpen) item.classList.add('open');
+          });
+        }
+      });
+      document.addEventListener('click', function() {
+        items.forEach(function(i) { i.classList.remove('open'); });
+        document.querySelectorAll('.ltb-drop-item').forEach(function(i) { i.classList.remove('open-sub'); });
+      });
+      window.toggleSub = function(e, id) {
+        e.stopPropagation();
+        var btn = e.currentTarget;
+        var isOpen = btn.classList.contains('open-sub');
+        document.querySelectorAll('.ltb-drop-item').forEach(function(i) { i.classList.remove('open-sub'); });
+        if (!isOpen) btn.classList.add('open-sub');
+      };
+    })();
+  </script>
+
+</body>
+</html>

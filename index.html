@@ -162,7 +162,7 @@
           <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-ccorp')">Form a C-Corp <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-ccorp"><div class="ltb-sub-header">Select Your State</div><a href="ccorp-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
           <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-sole')">Sole Proprietorship <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-sole"><div class="ltb-sub-header">Select Your State</div><a href="sole-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
           <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-partner')">Partnership <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-partner"><div class="ltb-sub-header">Select Your State</div><a href="partnership-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
-          <span class="ltb-drop-item soon">Nonprofit — coming soon</span>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-nonprofit')">Nonprofit <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-nonprofit"><div class="ltb-sub-header">Select Your State</div><a href="nonprofit-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
         
         </div>
       </div>
@@ -268,7 +268,14 @@
           <a class="soon">All other states — coming soon</a>
         </div>
       </div>
-      <button class="biz-btn soon">Nonprofit<br>coming soon</button>
+      <div class="state-drop-wrap">
+        <button class="biz-btn" id="nonprofitBtn">Nonprofit &#9660;</button>
+        <div class="state-drop-menu" id="nonprofitStates">
+          <div class="state-drop-header">Select Your State</div>
+          <a href="nonprofit-michigan.html">Michigan</a>
+          <a class="soon">All other states — coming soon</a>
+        </div>
+      </div>
     </div>
     <button class="cta-btn" id="startLLCBtn">Start With LLC &#8595;</button>
   </section>
@@ -290,6 +297,8 @@
     var partnerStates = document.getElementById('partnerStates');
     var ccorpBtn = document.getElementById('ccorpBtn');
     var ccorpStates = document.getElementById('ccorpStates');
+    var nonprofitBtn = document.getElementById('nonprofitBtn');
+    var nonprofitStates = document.getElementById('nonprofitStates');
 
     llcBtn.addEventListener('click', function(e) {
       e.stopPropagation();
@@ -298,6 +307,7 @@
       soleStates.classList.remove('open');
       partnerStates.classList.remove('open');
       ccorpStates.classList.remove('open');
+      nonprofitStates.classList.remove('open');
     });
 
     scorpBtn.addEventListener('click', function(e) {
@@ -307,6 +317,7 @@
       soleStates.classList.remove('open');
       partnerStates.classList.remove('open');
       ccorpStates.classList.remove('open');
+      nonprofitStates.classList.remove('open');
     });
 
     soleBtn.addEventListener('click', function(e) {
@@ -316,6 +327,7 @@
       scorpStates.classList.remove('open');
       partnerStates.classList.remove('open');
       ccorpStates.classList.remove('open');
+      nonprofitStates.classList.remove('open');
     });
 
     partnerBtn.addEventListener('click', function(e) {
@@ -325,6 +337,7 @@
       scorpStates.classList.remove('open');
       soleStates.classList.remove('open');
       ccorpStates.classList.remove('open');
+      nonprofitStates.classList.remove('open');
     });
 
     ccorpBtn.addEventListener('click', function(e) {
@@ -334,6 +347,17 @@
       scorpStates.classList.remove('open');
       soleStates.classList.remove('open');
       partnerStates.classList.remove('open');
+      nonprofitStates.classList.remove('open');
+    });
+
+    nonprofitBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      nonprofitStates.classList.toggle('open');
+      llcStates.classList.remove('open');
+      scorpStates.classList.remove('open');
+      soleStates.classList.remove('open');
+      partnerStates.classList.remove('open');
+      ccorpStates.classList.remove('open');
     });
 
     startLLCBtn.addEventListener('click', function(e) {
@@ -351,6 +375,7 @@
       soleStates.classList.remove('open');
       partnerStates.classList.remove('open');
       ccorpStates.classList.remove('open');
+      nonprofitStates.classList.remove('open');
     });
 
     // ── UNIVERSAL NAV ──
