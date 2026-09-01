@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Form a C-Corp in Michigan — Learn The Biz</title>
+  <meta name="description" content="How to form a C-Corporation in Michigan, step by step and in plain English. Filing fees, authorized shares, bylaws, stock, double taxation, and the Michigan Corporate Income Tax explained." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; }
+
+    /* ── UNIVERSAL NAV ── */
+    .ltb-nav { display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 62px; background: #0a0a0a; border-bottom: 0.5px solid #2a2a2a; position: sticky; top: 0; z-index: 1000; }
+    .ltb-logo { font-size: 20px; font-weight: 900; letter-spacing: 4px; color: #c9a84c; text-decoration: none; flex-shrink: 0; }
+    .ltb-links { display: flex; align-items: center; gap: 4px; }
+    .ltb-item { position: relative; }
+    .ltb-item-btn { display: flex; align-items: center; gap: 6px; padding: 0 16px; height: 62px; font-size: 13px; font-weight: 500; color: #aaa; background: none; border: none; cursor: pointer; font-family: inherit; letter-spacing: 0.5px; white-space: nowrap; text-decoration: none; }
+    .ltb-item-btn:hover { color: #c9a84c; }
+    .ltb-item.open > .ltb-item-btn { color: #c9a84c; }
+    .ltb-arrow { font-size: 9px; transition: transform 0.2s; }
+    .ltb-item.open > .ltb-item-btn .ltb-arrow { transform: rotate(180deg); }
+    .ltb-drop { display: none; position: absolute; top: 62px; left: auto; right: 0; background: #111; border: 0.5px solid #2a2a2a; border-radius: 10px; min-width: 220px; box-shadow: 0 12px 40px rgba(0,0,0,0.7); z-index: 1001; overflow: visible; padding: 6px 0; }
+    .ltb-item.open > .ltb-drop { display: block; }
+    .ltb-drop-item { position: relative; display: flex; align-items: center; justify-content: space-between; padding: 11px 16px; font-size: 14px; color: #ccc; text-decoration: none; cursor: pointer; white-space: nowrap; gap: 12px; background: none; border: none; width: 100%; font-family: inherit; text-align: left; }
+    .ltb-drop-item:hover { background: #1a1a1a; color: #c9a84c; }
+    .ltb-drop-item .ltb-sub-arrow { font-size: 10px; color: #555; flex-shrink: 0; }
+    .ltb-drop-item:hover .ltb-sub-arrow { color: #c9a84c; }
+    .ltb-drop-divider { height: 0.5px; background: #1e1e1e; margin: 4px 0; }
+    .ltb-drop-label { padding: 8px 16px 4px; font-size: 10px; letter-spacing: 2px; color: #555; text-transform: uppercase; }
+    .ltb-drop-item.soon { color: #444; cursor: default; pointer-events: none; }
+    .ltb-sub { display: none; position: absolute; top: -6px; right: calc(100% + 1px); left: auto; background: #111; border: 0.5px solid #2a2a2a; border-radius: 10px; width: 220px; max-height: 320px; overflow-y: auto; box-shadow: 0 12px 40px rgba(0,0,0,0.7); z-index: 1002; padding: 6px 0; }
+    .ltb-drop-item.open-sub > .ltb-sub { display: block; }
+    .ltb-sub::-webkit-scrollbar { width: 5px; }
+    .ltb-sub::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 3px; }
+    .ltb-sub a { display: block; padding: 10px 16px; font-size: 13px; color: #ccc; text-decoration: none; }
+    .ltb-sub a:hover { background: #1a1400; color: #c9a84c; }
+    .ltb-sub a.soon { color: #333; pointer-events: none; font-size: 12px; }
+    .ltb-sub-header { padding: 8px 16px 4px; font-size: 10px; letter-spacing: 2px; color: #555; text-transform: uppercase; }
+    .ltb-cta { background: #c9a84c; color: #0a0a0a; font-size: 12px; font-weight: 700; padding: 9px 20px; border-radius: 6px; border: none; cursor: pointer; letter-spacing: 1px; text-transform: uppercase; font-family: inherit; text-decoration: none; display: inline-block; margin-left: 8px; white-space: nowrap; }
+    .ltb-cta:hover { background: #e2bf6a; }
+
+    /* ── PAGE STYLES ── */
+    .hero { text-align: center; padding: 80px 40px 60px; border-bottom: 0.5px solid #1e1a08; background: #0a0a0a; }
+    .state-badge { display: inline-block; background: #1a1400; border: 0.5px solid #c9a84c; color: #c9a84c; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 24px; }
+    .hero h1 { font-size: 48px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+    .hero h1 span { color: #c9a84c; }
+    .gold-line { width: 60px; height: 2px; background: #c9a84c; margin: 0 auto 28px; border-radius: 1px; }
+    .hero p { font-size: 18px; color: #999; max-width: 600px; margin: 0 auto 36px; line-height: 1.65; }
+
+    .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #1a1a1a; border-top: 0.5px solid #1a1a1a; border-bottom: 0.5px solid #1a1a1a; }
+    .stat { background: #0f0f0f; padding: 28px 20px; text-align: center; }
+    .stat .num { font-size: 28px; font-weight: 900; color: #c9a84c; }
+    .stat .lbl { font-size: 12px; color: #666; letter-spacing: 1px; margin-top: 6px; text-transform: uppercase; }
+
+    .what-section { max-width: 860px; margin: 0 auto; padding: 72px 40px; border-bottom: 0.5px solid #1a1a1a; }
+    .section-tag { font-size: 11px; letter-spacing: 3px; color: #c9a84c; text-transform: uppercase; margin-bottom: 14px; }
+    .what-section h2 { font-size: 32px; font-weight: 700; margin-bottom: 24px; line-height: 1.2; }
+    .what-section p { font-size: 17px; color: #999; line-height: 1.75; margin-bottom: 18px; }
+    .pro-con { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+    .pro-box { background: #0a1a0a; border: 0.5px solid #1a3a1a; border-radius: 12px; padding: 24px; }
+    .con-box { background: #1a0a0a; border: 0.5px solid #3a1a1a; border-radius: 12px; padding: 24px; }
+    .pro-box h4 { color: #4caf50; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+    .con-box h4 { color: #e57373; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+    .pro-box li, .con-box li { font-size: 14px; color: #999; line-height: 1.7; margin-left: 16px; margin-bottom: 6px; }
+
+    /* double taxation walkthrough */
+    .flow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+    .flow-card { background: #111; border: 0.5px solid #2a2a2a; border-radius: 12px; padding: 24px 20px; }
+    .flow-card .flow-step { font-size: 12px; letter-spacing: 2px; color: #c9a84c; text-transform: uppercase; margin-bottom: 10px; }
+    .flow-card .flow-amt { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 8px; }
+    .flow-card p { font-size: 14px; color: #999; line-height: 1.7; margin: 0; }
+
+    .steps-section { max-width: 860px; margin: 0 auto; padding: 72px 40px; }
+    .steps-section > h2 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+    .steps-section > p { font-size: 17px; color: #999; margin-bottom: 52px; line-height: 1.65; }
+
+    .step-card { background: #111; border: 0.5px solid #222; border-radius: 16px; padding: 36px 32px; margin-bottom: 24px; }
+    .step-card.active-step { border-color: #3a2e10; }
+    .step-header { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 20px; }
+    .step-circle { width: 44px; height: 44px; border-radius: 50%; background: #c9a84c; color: #0a0a0a; font-size: 16px; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-title-wrap h3 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+    .step-title-wrap .step-sub { font-size: 13px; color: #666; letter-spacing: 1px; text-transform: uppercase; }
+    .step-body p { font-size: 16px; color: #999; line-height: 1.75; margin-bottom: 16px; }
+    .step-body p:last-child { margin-bottom: 0; }
+
+    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+    .info-pill { background: #0f0f0f; border: 0.5px solid #2a2a2a; border-radius: 10px; padding: 16px; text-align: center; }
+    .info-pill .pill-val { font-size: 20px; font-weight: 700; color: #c9a84c; }
+    .info-pill .pill-key { font-size: 11px; color: #666; letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+
+    .fee-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 15px; }
+    .fee-table th { text-align: left; padding: 12px 14px; font-size: 11px; letter-spacing: 2px; color: #666; text-transform: uppercase; border-bottom: 0.5px solid #2a2a2a; font-weight: 500; }
+    .fee-table td { padding: 12px 14px; color: #999; border-bottom: 0.5px solid #1a1a1a; }
+    .fee-table td:last-child { color: #c9a84c; font-weight: 700; text-align: right; white-space: nowrap; }
+    .fee-table tr:last-child td { border-bottom: none; }
+
+    .action-box { background: #0f0c03; border: 0.5px solid #3a2e10; border-radius: 10px; padding: 20px 24px; margin-top: 20px; }
+    .action-box h4 { font-size: 13px; color: #c9a84c; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    .action-box p { font-size: 15px; color: #999; line-height: 1.65; }
+    .action-box a { color: #c9a84c; text-decoration: none; }
+    .action-box a:hover { text-decoration: underline; }
+
+    .warning-box { background: #1a1000; border: 0.5px solid #4a3000; border-radius: 10px; padding: 20px 24px; margin-top: 20px; }
+    .warning-box h4 { font-size: 13px; color: #f0a500; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    .warning-box p { font-size: 15px; color: #999; line-height: 1.65; }
+    .warning-box a { color: #f0a500; text-decoration: none; }
+
+    .tip-box { background: #0a1a0a; border: 0.5px solid #2a4a2a; border-radius: 10px; padding: 20px 24px; margin-top: 20px; }
+    .tip-box h4 { font-size: 13px; color: #4caf50; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    .tip-box p { font-size: 15px; color: #999; line-height: 1.65; }
+
+    .checklist { list-style: none; margin-top: 16px; }
+    .checklist li { font-size: 15px; color: #999; padding: 10px 0; border-bottom: 0.5px solid #1a1a1a; display: flex; align-items: flex-start; gap: 12px; line-height: 1.6; }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li::before { content: "→"; color: #c9a84c; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+    .ongoing-section { background: #0f0c03; border-top: 0.5px solid #1e1a08; border-bottom: 0.5px solid #1e1a08; padding: 72px 40px; }
+    .ongoing-inner { max-width: 860px; margin: 0 auto; }
+    .ongoing-inner h2 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+    .ongoing-inner > p { font-size: 17px; color: #999; margin-bottom: 40px; line-height: 1.65; }
+    .ongoing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .ongoing-card { background: #111; border: 0.5px solid #2a2a2a; border-radius: 12px; padding: 28px 24px; }
+    .ongoing-card h3 { font-size: 17px; font-weight: 500; color: #c9a84c; margin-bottom: 12px; }
+    .ongoing-card p { font-size: 15px; color: #999; line-height: 1.7; }
+    .ongoing-card .fee-tag { display: inline-block; background: #1a1400; border: 0.5px solid #c9a84c; color: #c9a84c; font-size: 12px; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+
+    .cta-section { padding: 80px 40px; text-align: center; border-top: 0.5px solid #1a1a1a; }
+    .cta-section h2 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+    .cta-section p { font-size: 17px; color: #999; margin-bottom: 40px; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cta-btn { background: #c9a84c; color: #0a0a0a; font-size: 15px; font-weight: 700; padding: 16px 36px; border-radius: 6px; border: none; cursor: pointer; letter-spacing: 1px; text-transform: uppercase; font-family: inherit; text-decoration: none; display: inline-block; }
+    .cta-btn:hover { background: #e2bf6a; }
+    .cta-btn-outline { background: transparent; color: #c9a84c; font-size: 15px; font-weight: 700; padding: 16px 36px; border-radius: 6px; border: 0.5px solid #c9a84c; cursor: pointer; letter-spacing: 1px; text-transform: uppercase; font-family: inherit; text-decoration: none; display: inline-block; }
+    .cta-btn-outline:hover { background: #1a1400; }
+
+    footer { padding: 28px 40px; text-align: center; border-top: 0.5px solid #1a1a1a; }
+    footer p { font-size: 12px; color: #333; letter-spacing: 1px; }
+
+    @media (max-width: 700px) {
+      .ltb-nav { padding: 0 20px; }
+      .ltb-cta { display: none; }
+      .hero { padding: 60px 24px 40px; }
+      .hero h1 { font-size: 32px; }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      .what-section, .steps-section { padding: 52px 24px; }
+      .pro-con { grid-template-columns: 1fr; }
+      .flow-grid { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: 1fr 1fr; }
+      .fee-table { font-size: 14px; }
+      .fee-table th, .fee-table td { padding: 10px 8px; }
+      .ongoing-section { padding: 52px 24px; }
+      .ongoing-grid { grid-template-columns: 1fr; }
+      .step-card { padding: 28px 20px; }
+      .cta-section { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- UNIVERSAL NAV -->
+  <nav class="ltb-nav">
+    <a class="ltb-logo" href="index.html">LEARN THE BIZ</a>
+    <div class="ltb-links">
+      <div class="ltb-item"><a class="ltb-item-btn" href="index.html">Home</a></div>
+      <div class="ltb-item" id="nav-learn">
+        <button class="ltb-item-btn">Learn <span class="ltb-arrow">▼</span></button>
+        <div class="ltb-drop">
+          <div class="ltb-drop-label">Business Types</div>
+          <a class="ltb-drop-item" href="learn.html?panel=llc">Find My Business Type</a>
+          <a class="ltb-drop-item" href="learn.html?panel=llc">LLC — What It Is</a>
+          <a class="ltb-drop-item" href="learn.html?panel=scorp">S-Corp — What It Is</a>
+          <a class="ltb-drop-item" href="learn.html?panel=ccorp">C-Corp — What It Is</a>
+          <a class="ltb-drop-item" href="learn.html?panel=sole">Sole Proprietorship — What It Is</a>
+          <a class="ltb-drop-item" href="learn.html?panel=partnership">Partnership — What It Is</a>
+          <a class="ltb-drop-item" href="learn.html?panel=nonprofit">Nonprofit — What It Is</a>
+          <div class="ltb-drop-divider"></div>
+          <div class="ltb-drop-label">Quiz</div>
+          <a class="ltb-drop-item" href="learn.html#quiz">Help Me Choose My Business Type</a>
+        </div>
+      </div>
+      <div class="ltb-item" id="nav-taxes">
+        <button class="ltb-item-btn">Taxes <span class="ltb-arrow">▼</span></button>
+        <div class="ltb-drop">
+          <div class="ltb-drop-label">Select Business Type</div>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-tax-llc')">LLC Taxes <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-tax-llc"><div class="ltb-sub-header">Select Your State</div><a href="tax-michigan.html#llc">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-tax-scorp')">S-Corp Taxes <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-tax-scorp"><div class="ltb-sub-header">Select Your State</div><a href="tax-michigan.html#scorp">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-tax-ccorp')">C-Corp Taxes <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-tax-ccorp"><div class="ltb-sub-header">Select Your State</div><a href="tax-michigan.html#ccorp">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-tax-sole')">Sole Prop Taxes <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-tax-sole"><div class="ltb-sub-header">Select Your State</div><a href="tax-michigan.html#sole">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-tax-partner')">Partnership Taxes <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-tax-partner"><div class="ltb-sub-header">Select Your State</div><a href="tax-michigan.html#partnership">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-tax-nonprofit')">Nonprofit Taxes <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-tax-nonprofit"><div class="ltb-sub-header">Select Your State</div><a href="tax-michigan.html#nonprofit">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+        </div>
+      </div>
+      <div class="ltb-item" id="nav-form">
+        <button class="ltb-item-btn">Start Forming <span class="ltb-arrow">▼</span></button>
+        <div class="ltb-drop">
+          <div class="ltb-drop-label">Choose Your Structure</div>
+
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-llc')">Form an LLC <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-llc"><div class="ltb-sub-header">Select Your State</div><a href="llc-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-scorp')">Form an S-Corp <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-scorp"><div class="ltb-sub-header">Select Your State</div><a href="scorp-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-ccorp')">Form a C-Corp <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-ccorp"><div class="ltb-sub-header">Select Your State</div><a href="ccorp-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-sole')">Sole Proprietorship <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-sole"><div class="ltb-sub-header">Select Your State</div><a href="sole-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <button class="ltb-drop-item" onclick="toggleSub(event,'sub-form-partner')">Partnership <span class="ltb-sub-arrow">›</span><div class="ltb-sub" id="sub-form-partner"><div class="ltb-sub-header">Select Your State</div><a href="partnership-michigan.html">Michigan</a><a class="soon">All other states — coming soon</a></div></button>
+          <span class="ltb-drop-item soon">Nonprofit — coming soon</span>
+
+        </div>
+      </div>
+      <a class="ltb-cta" href="learn.html">Find My Business Type</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="state-badge">Michigan C-Corp Guide</div>
+    <h1>How to Form a C-Corp<br><span>in Michigan</span></h1>
+    <div class="gold-line"></div>
+    <p>The structure built for raising money and issuing stock — and the one most small businesses should skip. Here is the honest, step-by-step breakdown. All information verified from official Michigan and IRS sources.</p>
+  </section>
+
+  <!-- QUICK STATS -->
+  <div class="stats-bar">
+    <div class="stat"><div class="num">$60</div><div class="lbl">Minimum Filing Fee</div></div>
+    <div class="stat"><div class="num">$25</div><div class="lbl">Annual Report</div></div>
+    <div class="stat"><div class="num">May 15</div><div class="lbl">Annual Report Due</div></div>
+    <div class="stat"><div class="num">21%</div><div class="lbl">Federal Corporate Rate</div></div>
+  </div>
+
+  <!-- WHAT IS A C-CORP -->
+  <div class="what-section">
+    <div class="section-tag">Before You Start</div>
+    <h2>What is a C-Corp and is it right for you?</h2>
+    <p>A C-Corporation is a business that legally exists as its own separate person. It can own property, sign contracts, sue and be sued, and pay its own taxes, completely apart from the people who own it. When you hear "corporation" without a letter in front of it, this is what people mean. Every publicly traded company in America is a C-Corp.</p>
+    <p>The "C" comes from Subchapter C of the tax code. It is not something you elect or apply for. If you file Articles of Incorporation in Michigan and do nothing else, you have a C-Corp by default. Filing IRS Form 2553 afterward is what converts it to an S-Corp.</p>
+    <p>Here is the part that decides this for most people. A C-Corp pays corporate income tax on its profit. Then, when it distributes what's left to the owners as dividends, the owners pay personal income tax on that same money again. Two layers of tax on one pile of profit. That is double taxation, and it is the reason the overwhelming majority of small businesses should not be a C-Corp.</p>
+    <div class="pro-con">
+      <div class="pro-box">
+        <h4>✓ Pros of a C-Corp</h4>
+        <ul>
+          <li>The only structure serious investors and VCs will fund</li>
+          <li>Unlimited shareholders, including foreign owners and other companies</li>
+          <li>Multiple classes of stock — common, preferred, voting, non-voting</li>
+          <li>Strong liability protection separating you from the business</li>
+          <li>Can deduct the full cost of employee health and fringe benefits</li>
+          <li>Profit can stay in the company at 21% instead of hitting your personal return</li>
+          <li>Exists forever — ownership transfers by selling shares</li>
+        </ul>
+      </div>
+      <div class="con-box">
+        <h4>✗ Things to Know</h4>
+        <ul>
+          <li>Double taxation — corporate tax, then personal tax on dividends</li>
+          <li>The most paperwork and formality of any structure</li>
+          <li>Board of directors, bylaws, annual meetings, written minutes required</li>
+          <li>Separate corporate tax return every year, whether or not you profit</li>
+          <li>Losses stay trapped in the company — you cannot deduct them personally</li>
+          <li>Higher accounting and legal costs than an LLC</li>
+          <li>Skipping the formalities can cost you your liability protection</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOUBLE TAXATION EXPLAINED -->
+  <div class="what-section">
+    <div class="section-tag">The Thing Everyone Gets Wrong</div>
+    <h2>Double taxation, in actual numbers.</h2>
+    <p>People nod along when they hear "double taxation" without picturing what it does to real money. Say your Michigan C-Corp earns $100,000 in profit and you want to take all of it home. Here is the trip that money makes.</p>
+    <div class="flow-grid">
+      <div class="flow-card">
+        <div class="flow-step">Step 1 — The Company Earns</div>
+        <div class="flow-amt">$100,000</div>
+        <p>Your corporation has $100,000 of profit left after paying all its expenses, including any salary it paid you.</p>
+      </div>
+      <div class="flow-card">
+        <div class="flow-step">Step 2 — Corporate Tax</div>
+        <div class="flow-amt">−$21,000</div>
+        <p>The corporation pays 21% federal corporate income tax on that profit. Michigan may add 6% CIT on top if the company clears the state filing threshold.</p>
+      </div>
+      <div class="flow-card">
+        <div class="flow-step">Step 3 — Dividend Tax</div>
+        <div class="flow-amt">−$11,850</div>
+        <p>The remaining $79,000 is paid out to you as a dividend. You pay personal tax on it again — commonly 15% federal for qualified dividends, plus Michigan's 4.25%.</p>
+      </div>
+    </div>
+    <div class="warning-box">
+      <h4>⚠ Roughly $67,000 of a $100,000 Profit Reaches You</h4>
+      <p>The exact numbers move with your income bracket and whether the corporation owes Michigan CIT, so treat this as an illustration rather than a quote. But the shape is always the same: two separate taxes on one pile of money. An LLC or S-Corp taxed as a pass-through gets taxed once. This is the single biggest reason to think hard before incorporating.</p>
+    </div>
+    <div class="tip-box">
+      <h4>💡 When a C-Corp Actually Makes Sense</h4>
+      <p>Three situations. First, you are raising venture capital — investors require a C-Corp, usually a Delaware one, because they need preferred stock and clean cap tables. Second, you intend to reinvest profit into growth rather than pay yourself, so it sits inside the company at 21% and never gets taxed a second time. Third, you have a large employee base and want to deduct the full cost of benefits. If none of those describe you, read the <a href="llc-michigan.html" style="color:#4caf50;">Michigan LLC Guide</a> or the <a href="scorp-michigan.html" style="color:#4caf50;">Michigan S-Corp Guide</a> first.</p>
+    </div>
+  </div>
+
+  <!-- STEPS -->
+  <div class="steps-section">
+    <div class="section-tag">The Playbook</div>
+    <h2>Step-by-Step: Form Your Michigan C-Corp</h2>
+    <p>Ten steps from decision to open for business. Steps six and seven are the ones people skip, and skipping them is what gets liability protection thrown out in court. Do them in order.</p>
+
+    <!-- STEP 1 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">1</div>
+        <div class="step-title-wrap"><div class="step-sub">Step One</div><h3>Make Sure a C-Corp Is Actually What You Need</h3></div>
+      </div>
+      <div class="step-body">
+        <p>Before spending a dollar, be honest about why you are here. A lot of first-time founders reach for "Inc." because it sounds more legitimate than "LLC." It is not. Clients and banks treat both as real companies, and an LLC costs less to run and gets taxed once instead of twice.</p>
+        <p>Work through the list below. If you cannot check at least one box, a C-Corp is probably the wrong tool and you should compare it against an LLC or an S-Corp before going further.</p>
+        <ul class="checklist">
+          <li>You are raising or plan to raise money from venture capital or angel investors</li>
+          <li>You need to issue multiple classes of stock, like preferred shares for investors</li>
+          <li>You plan to reinvest most profits into growth rather than take them home</li>
+          <li>You will have foreign owners or other companies as shareholders, which an S-Corp cannot have</li>
+          <li>You want to offer stock options to employees as part of their pay</li>
+          <li>You are building toward an eventual acquisition or public offering</li>
+        </ul>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Write down which boxes you checked and why. Then take that list to a CPA before you file anything. One conversation now costs a couple hundred dollars; converting an entity later costs far more and can trigger taxes. If you are unsure, take the <a href="learn.html#quiz">business type quiz</a> first.</p>
+        </div>
+        <div class="warning-box">
+          <h4>⚠ Raising Venture Capital? Ask About Delaware First</h4>
+          <p>Almost every venture-backed startup incorporates in Delaware, not their home state, because investors expect Delaware corporate law and standardized documents. If institutional funding is genuinely in your plan, ask your attorney about Delaware before filing in Michigan. If you are building a normal Michigan business, incorporate in Michigan — registering out of state just means paying two states instead of one.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">2</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Two</div><h3>Name Your Corporation</h3></div>
+      </div>
+      <div class="step-body">
+        <p>Michigan requires a corporate name to include a word or abbreviation signaling that it is a corporation. Your options are Corporation, Incorporated, Company, or Limited, or the abbreviations Corp., Inc., Co., or Ltd. Your name also has to be distinguishable from every other entity already registered with the state.</p>
+        <p>Certain words are restricted. Anything implying you are a bank, an insurance company, or a licensed profession needs approval or proof of licensing before the state will accept it.</p>
+        <ul class="checklist">
+          <li>Must include Corporation, Incorporated, Company, Limited, or an abbreviation of one</li>
+          <li>Must be distinguishable from existing entities in the state registry</li>
+          <li>Cannot imply a purpose the corporation is not authorized to carry out</li>
+          <li>Restricted words like "bank" or "insurance" require approval</li>
+          <li>Check the federal trademark database before investing in branding</li>
+          <li>Confirm the .com domain and social media handles are free</li>
+        </ul>
+        <div class="info-grid">
+          <div class="info-pill"><div class="pill-val">$10</div><div class="pill-key">Name Reservation</div></div>
+          <div class="info-pill"><div class="pill-val">6 Months</div><div class="pill-key">Reservation Holds</div></div>
+          <div class="info-pill"><div class="pill-val">Free</div><div class="pill-key">Name Search</div></div>
+        </div>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Search your name free at <a href="https://mibusinessregistry.lara.state.mi.us" target="_blank">mibusinessregistry.lara.state.mi.us</a>. If you are not ready to file yet but want to lock the name, file an Application for Reservation of Name (Form 540) with LARA for $10. Buy the domain the same day you settle on the name.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">3</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Three</div><h3>Appoint a Resident Agent</h3></div>
+      </div>
+      <div class="step-body">
+        <p>Michigan calls this a resident agent. Most other states call it a registered agent. It is the person or company officially designated to receive legal papers and state notices for your corporation, and every Michigan corporation is required to have one.</p>
+        <p>The requirements are strict on one point: the agent needs a physical Michigan street address where someone is present during business hours. A P.O. box does not qualify. You can be your own resident agent, but that address becomes public record and you have to be reliably available during the day.</p>
+        <ul class="checklist">
+          <li>Must have a physical Michigan street address — no P.O. boxes</li>
+          <li>Must be available during normal business hours</li>
+          <li>Can be you, another individual, or a commercial agent service</li>
+          <li>The address becomes public record in the state database</li>
+          <li>Commercial services typically run $100–$300 per year</li>
+        </ul>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Decide before you file, because the agent's name and address go directly on your Articles of Incorporation. If you work from home and do not want that address published, or if you travel, use a commercial resident agent service. Changing your agent later costs $5 with LARA.</p>
+        </div>
+        <div class="warning-box">
+          <h4>⚠ Missing a Legal Notice Can Cost You the Case</h4>
+          <p>If your corporation gets sued and the papers go to an agent address where nobody collects mail, the case can proceed without you and result in a default judgment. This is the whole reason the requirement exists. Whoever you name has to actually be reachable.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">4</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Four</div><h3>Decide How Many Shares to Authorize</h3></div>
+      </div>
+      <div class="step-body">
+        <p>This step does not exist for LLCs and it catches almost every first-time incorporator off guard, because in Michigan the number of shares you authorize directly determines your filing fee.</p>
+        <p>Authorized shares are the maximum number of shares your corporation is permitted to issue. It is a ceiling, not a commitment. You do not have to issue them all, and most corporations issue only a fraction. Michigan charges a $10 non-refundable filing fee plus an organization fee that scales with your authorized share count.</p>
+        <table class="fee-table">
+          <tr><th>Authorized Shares</th><th>Organization Fee</th></tr>
+          <tr><td>1 – 60,000</td><td>$50</td></tr>
+          <tr><td>60,001 – 1,000,000</td><td>$100</td></tr>
+          <tr><td>1,000,001 – 5,000,000</td><td>$300</td></tr>
+          <tr><td>5,000,001 – 10,000,000</td><td>$500</td></tr>
+          <tr><td>Over 10,000,000</td><td>$500 for the first 10 million, plus $1,000 per additional 10 million</td></tr>
+        </table>
+        <p>Add the $10 filing fee to whichever row applies. A corporation authorizing 60,000 shares or fewer pays $60 total, which is the practical minimum and the right choice for the vast majority of Michigan corporations.</p>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Unless an attorney has told you otherwise for a specific funding reason, authorize 60,000 shares or fewer and pay $60. A common setup is 10,000 authorized shares with only 1,000 actually issued to the founders, leaving room to bring people in later without amending anything. If you later need more shares, you can file a Certificate of Amendment and pay the difference.</p>
+        </div>
+        <div class="tip-box">
+          <h4>💡 Authorized Is Not the Same as Issued</h4>
+          <p>Authorized shares are what you are allowed to create. Issued shares are what you have actually handed out to owners. Ownership percentage is calculated from issued shares, not authorized ones. If you authorize 10,000 and issue 1,000 split evenly between two founders, each founder owns 50% of the company, not 5%.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">5</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Five</div><h3>File Your Articles of Incorporation</h3></div>
+      </div>
+      <div class="step-body">
+        <p>This is the filing that creates your corporation. In Michigan it is Form 500, Articles of Incorporation for a For-Profit Corporation, filed with LARA's Corporations Division. Your corporation legally exists the moment the state accepts it.</p>
+        <p>The form is short. You will need your corporate name, your authorized share count and their par value if any, your resident agent's name and Michigan street address, the general purpose of the business, and the name and address of each incorporator.</p>
+        <div class="info-grid">
+          <div class="info-pill"><div class="pill-val">$60</div><div class="pill-key">Minimum Total Fee</div></div>
+          <div class="info-pill"><div class="pill-val">Form 500</div><div class="pill-key">Articles of Incorporation</div></div>
+          <div class="info-pill"><div class="pill-val">Online</div><div class="pill-key">Filing Method</div></div>
+        </div>
+        <p>If you are on a deadline, LARA offers expedited processing for an extra fee on top of the filing fee: $50 for 24-hour service, $100 for same-day, $500 for two-hour, and $1,000 for one-hour turnaround on formation documents.</p>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>File online at <a href="https://mibusinessregistry.lara.state.mi.us" target="_blank">mibusinessregistry.lara.state.mi.us</a>. Online filing is faster and cheaper to track than mailing paper. Save the endorsed, stamped copy the state sends back — your bank will want to see it and you will need it for nearly everything that follows.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 6 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">6</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Six</div><h3>Adopt Corporate Bylaws</h3></div>
+      </div>
+      <div class="step-body">
+        <p>Bylaws are the rulebook for how your corporation operates. They are not filed with the state and nobody checks whether you have them, which is exactly why people skip this step. Skipping it is a mistake with real consequences.</p>
+        <p>If your corporation is ever sued, one of the first things the other side looks for is whether you actually ran it like a corporation or just used it as a shell. No bylaws, no board meetings, no minutes, personal and business money mixed together — that pattern is how a court decides to pierce the corporate veil and come after your personal assets. The liability protection you paid for evaporates.</p>
+        <ul class="checklist">
+          <li><strong style="color:#e0e0e0;">Board structure</strong> — how many directors, how they are elected, how long they serve</li>
+          <li><strong style="color:#e0e0e0;">Officer roles</strong> — president, secretary, treasurer, and what each is responsible for</li>
+          <li><strong style="color:#e0e0e0;">Meeting rules</strong> — how often the board and shareholders meet, and how notice is given</li>
+          <li><strong style="color:#e0e0e0;">Voting and quorum</strong> — how many people must be present and what margin passes a decision</li>
+          <li><strong style="color:#e0e0e0;">Stock rules</strong> — how shares are issued, transferred, and valued</li>
+          <li><strong style="color:#e0e0e0;">Officer authority</strong> — what size decision an officer can make alone versus needing board approval</li>
+          <li><strong style="color:#e0e0e0;">Conflicts of interest</strong> — how deals involving a director or officer get handled</li>
+          <li><strong style="color:#e0e0e0;">Amendment process</strong> — how the bylaws themselves get changed</li>
+        </ul>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Draft your bylaws before your first board meeting, because the board formally adopts them at that meeting. Have a Michigan business attorney review them, especially if you have more than one shareholder. Keep the signed original in a corporate records binder along with your Articles and your stock records.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 7 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">7</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Seven</div><h3>Hold Your Organizational Meeting and Issue Stock</h3></div>
+      </div>
+      <div class="step-body">
+        <p>Filing the Articles creates the legal shell. This meeting turns it into a functioning company with owners. Even if you are the only person involved, hold it, and write it down. A one-person corporation still needs a paper trail showing the corporation acted as a corporation.</p>
+        <p>Issuing stock is the part that actually makes people owners. Until shares are issued, your corporation technically has no shareholders. Each founder receives a stock certificate, and every issuance gets recorded in a stock ledger showing who owns what and what they paid for it.</p>
+        <ul class="checklist">
+          <li>Formally adopt the bylaws</li>
+          <li>Appoint the initial board of directors</li>
+          <li>Elect officers — president, secretary, treasurer</li>
+          <li>Authorize the issuance of stock to the founders and record what each paid</li>
+          <li>Approve opening a corporate bank account and name who can sign</li>
+          <li>Set the corporation's fiscal year</li>
+          <li>Write and sign minutes documenting every decision above</li>
+        </ul>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Hold the meeting, take written minutes, and have every director sign them. Issue stock certificates to each founder and start a stock ledger recording the date, number of shares, and price paid. Put all of it in one corporate records binder and keep it current — this binder is your evidence that the corporation is real.</p>
+        </div>
+        <div class="warning-box">
+          <h4>⚠ Founders: Ask a CPA About an 83(b) Election</h4>
+          <p>If your founder shares vest over time rather than being owned outright from day one, there is an IRS election called an 83(b) that must be filed within 30 days of the stock being issued. The deadline is absolute and there is no fixing it late. Getting this wrong can create a large tax bill years down the road on stock you never sold. Ask before you issue, not after.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 8 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">8</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Eight</div><h3>Get Your EIN (Federal Tax ID)</h3></div>
+      </div>
+      <div class="step-body">
+        <p>Every corporation is required to have an Employer Identification Number. There is no version of a C-Corp that can run on a Social Security Number, because the corporation is its own taxpayer and files its own return. You need it to open a bank account, run payroll, and file Form 1120.</p>
+        <ul class="checklist">
+          <li>Required for every corporation, with or without employees</li>
+          <li>Required to file the corporate tax return, Form 1120</li>
+          <li>Required to open a corporate bank account and run payroll</li>
+          <li>Free and instant from the IRS — about 10 minutes online</li>
+          <li>Apply after your Articles are approved, not before</li>
+        </ul>
+        <div class="info-grid">
+          <div class="info-pill"><div class="pill-val">Free</div><div class="pill-key">No Cost Ever</div></div>
+          <div class="info-pill"><div class="pill-val">Instant</div><div class="pill-key">Online Application</div></div>
+          <div class="info-pill"><div class="pill-val">IRS.gov</div><div class="pill-key">Only Official Source</div></div>
+        </div>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Apply free at <a href="https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online" target="_blank">irs.gov — Apply for EIN Online</a>. Available Monday–Friday, 7am–10pm Eastern. An officer applies as the responsible party using their own Social Security Number. Save the confirmation letter in your corporate records binder.</p>
+        </div>
+        <div class="warning-box">
+          <h4>⚠ Watch Out for EIN Scams</h4>
+          <p>Plenty of sites charge $50–$300 to "get your EIN for you." It is unnecessary. The IRS application is free and takes about 10 minutes at irs.gov. Any site charging for an EIN is a middleman you do not need.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 9 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">9</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Nine</div><h3>Open a Corporate Bank Account and Set Up Payroll</h3></div>
+      </div>
+      <div class="step-body">
+        <p>A separate bank account matters more for a corporation than for any other structure. Mixing corporate and personal money is the clearest evidence a court can find that the corporation is not really separate from you, which is precisely the argument used to strip away liability protection.</p>
+        <p>If you work in your own corporation, you are an employee of it. That means real payroll: a W-2, withheld income tax, and Social Security and Medicare contributions from both you and the company. You cannot simply move money from the corporate account to your personal one and call it pay.</p>
+        <ul class="checklist">
+          <li>Your endorsed Articles of Incorporation from LARA</li>
+          <li>Your EIN confirmation letter from the IRS</li>
+          <li>Your adopted corporate bylaws</li>
+          <li>The board resolution authorizing the account and naming who can sign</li>
+          <li>Government-issued photo ID for each signer</li>
+          <li>Your corporate records binder, in case the bank asks for anything else</li>
+        </ul>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Open a business checking account in the corporation's exact legal name. Mercury and Relay offer free business banking suited to corporations; Huntington, Chase, and Michigan credit unions are solid traditional options. Then set up payroll through a provider like Gusto or ADP before your first paycheck. Register for Michigan withholding tax through <a href="https://www.michigan.gov/taxes/mto" target="_blank">Michigan Treasury Online</a> and set up unemployment insurance with the Michigan UIA.</p>
+        </div>
+        <div class="tip-box">
+          <h4>💡 Salary Is Deductible, Dividends Are Not</h4>
+          <p>Reasonable salary paid to owner-employees is a deductible business expense, which lowers the corporation's taxable profit and means that money only gets taxed once, on your personal return. Dividends are paid out of profit already taxed at the corporate level. This is why C-Corp owners typically take most of their money as salary. Have a CPA help you set the split — the IRS pushes back on salaries that are unreasonably high or low.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 10 -->
+    <div class="step-card active-step">
+      <div class="step-header">
+        <div class="step-circle">10</div>
+        <div class="step-title-wrap"><div class="step-sub">Step Ten</div><h3>Understand Your Tax Obligations</h3></div>
+      </div>
+      <div class="step-body">
+        <p>Your corporation files its own federal return, Form 1120, and pays a flat 21% federal tax on its taxable income. For calendar-year corporations, Form 1120 is due April 15. This return is required whether the corporation made money, lost money, or did nothing at all.</p>
+        <p>Michigan is where C-Corps get a break most people do not expect. The Michigan Corporate Income Tax is 6%, but a corporation with less than $350,000 in gross receipts apportioned to Michigan is not required to file a CIT return or pay the tax. The same exemption applies if the annual CIT liability comes to $100 or less. A large share of small Michigan corporations fall under that line entirely.</p>
+        <ul class="checklist">
+          <li><strong style="color:#e0e0e0;">Federal Form 1120</strong> — the corporate return, 21% flat rate, due April 15 for calendar-year filers</li>
+          <li><strong style="color:#e0e0e0;">Michigan CIT, Form 4891</strong> — 6%, due the last day of the fourth month after year end (April 30 for calendar-year filers)</li>
+          <li><strong style="color:#e0e0e0;">CIT filing threshold</strong> — no return and no tax if Michigan gross receipts are under $350,000 or liability is $100 or less</li>
+          <li><strong style="color:#e0e0e0;">Small Business Alternative Credit</strong> — an effective 1.8% rate for qualifying corporations instead of 6%</li>
+          <li><strong style="color:#e0e0e0;">CIT quarterly estimates, Form 4913</strong> — required if annual CIT liability exceeds $800; due April 15, July 15, October 15, and January 15</li>
+          <li><strong style="color:#e0e0e0;">Payroll taxes</strong> — federal and Michigan withholding, plus Social Security and Medicare on every paycheck</li>
+          <li><strong style="color:#e0e0e0;">Michigan sales tax</strong> — 6% if you sell taxable goods, filed through Michigan Treasury Online</li>
+          <li><strong style="color:#e0e0e0;">Local city income tax</strong> — 24 Michigan cities including Detroit and Grand Rapids levy their own</li>
+        </ul>
+        <div class="tip-box">
+          <h4>💡 The Small Business Alternative Credit</h4>
+          <p>Michigan offers qualifying corporations a credit that effectively drops the 6% CIT rate to 1.8% of adjusted business income. To be eligible, gross receipts must not exceed $20 million, adjusted business income must not exceed $1.3 million, and no individual officer or shareholder's allocated income can exceed $180,000. If your corporation clears the $350,000 filing threshold, ask your CPA whether you qualify — it is a meaningful difference.</p>
+        </div>
+        <div class="warning-box">
+          <h4>⚠ File Form 1120 Even in a Year You Make Nothing</h4>
+          <p>The federal corporate return is required every year the corporation exists, regardless of income. There is no "we did not do anything this year" exemption. Penalties accrue monthly on unfiled returns. If you incorporate and then set the business aside, either keep filing or formally dissolve the corporation with the state.</p>
+        </div>
+        <div class="action-box">
+          <h4>Your Action Step</h4>
+          <p>Hire a CPA before your first fiscal year ends, not at tax time. Corporate returns are meaningfully harder than personal ones, the salary-versus-dividend split needs planning ahead of time, and the Michigan CIT thresholds and credits reward getting advice early. Register for Michigan business taxes at <a href="https://www.michigan.gov/taxes/mto" target="_blank">michigan.gov/taxes/mto</a>.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ONGOING REQUIREMENTS -->
+  <div class="ongoing-section">
+    <div class="ongoing-inner">
+      <div class="section-tag">Stay On Track</div>
+      <h2>Ongoing Requirements</h2>
+      <p>A corporation carries more upkeep than any other structure, and the formalities are not optional busywork. They are the evidence that keeps your liability protection intact.</p>
+      <div class="ongoing-grid">
+        <div class="ongoing-card">
+          <div class="fee-tag">Annual — $25 — May 15</div>
+          <h3>Michigan Annual Report</h3>
+          <p>File Form 2500 with LARA by May 15 every year. The fee is $25 if it is on time. Late fees climb month by month — $35 by the end of May, $45 in June, $55 in July, $65 in August, and $75 from September onward. Two consecutive missed years and the state can dissolve your corporation.</p>
+        </div>
+        <div class="ongoing-card">
+          <div class="fee-tag">Annual — April 15</div>
+          <h3>Federal Form 1120</h3>
+          <p>The corporate income tax return, taxed at a flat 21%. Due April 15 for calendar-year corporations. Required every single year the corporation exists, profitable or not.</p>
+        </div>
+        <div class="ongoing-card">
+          <div class="fee-tag">Annual — April 30</div>
+          <h3>Michigan CIT Return</h3>
+          <p>File Form 4891 by the last day of the fourth month after your tax year ends. Skip it only if your Michigan gross receipts are under $350,000 or your liability is $100 or less. Quarterly estimates on Form 4913 are required once liability tops $800.</p>
+        </div>
+        <div class="ongoing-card">
+          <div class="fee-tag">Annual</div>
+          <h3>Board and Shareholder Meetings</h3>
+          <p>Hold them, and write minutes. This is the formality that most often decides whether a court respects your corporate shield. Even a single-shareholder corporation should document its annual meeting in writing every year.</p>
+        </div>
+        <div class="ongoing-card">
+          <div class="fee-tag">Every Pay Period</div>
+          <h3>Payroll and Withholding</h3>
+          <p>Owner-employees get W-2 paychecks with proper withholding. File federal Form 941 quarterly, Michigan withholding through MTO, and W-2s by January 31. A payroll provider handles this automatically and is worth the cost.</p>
+        </div>
+        <div class="ongoing-card">
+          <div class="fee-tag">Ongoing</div>
+          <h3>Corporate Records and Stock Ledger</h3>
+          <p>Keep the Articles, bylaws, all meeting minutes, resolutions, and the stock ledger together and current. Update the ledger every time shares are issued or transferred. Never pay personal expenses from the corporate account.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="section-tag" style="text-align:center;">You're Ready</div>
+    <h2>That's your complete Michigan C-Corp playbook.</h2>
+    <p>File the Articles, adopt the bylaws, issue the stock, and keep the records. Ready to dig into the tax side or compare this against a simpler structure?</p>
+    <div class="cta-btns">
+      <a class="cta-btn" href="tax-michigan.html#ccorp" target="_blank">Michigan C-Corp Tax Guide</a>
+      <a class="cta-btn-outline" href="scorp-michigan.html">Compare: Michigan S-Corp Guide</a>
+      <a class="cta-btn-outline" href="index.html">Back to Home</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Learn The Biz &middot; All Rights Reserved &middot; Information verified from official Michigan and IRS sources</p>
+  </footer>
+
+  <script>
+    (function() {
+      var hoverDelay = 150;
+      var closeTimer = {};
+      var items = document.querySelectorAll('.ltb-item');
+      items.forEach(function(item) {
+        var id = item.id || Math.random();
+        item.addEventListener('mouseenter', function() {
+          clearTimeout(closeTimer[id]);
+          items.forEach(function(i) { if (i !== item) i.classList.remove('open'); });
+          item.classList.add('open');
+        });
+        item.addEventListener('mouseleave', function() {
+          closeTimer[id] = setTimeout(function() { item.classList.remove('open'); }, hoverDelay);
+        });
+        var btn = item.querySelector('.ltb-item-btn');
+        if (btn && btn.tagName === 'BUTTON') {
+          btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var isOpen = item.classList.contains('open');
+            items.forEach(function(i) { i.classList.remove('open'); });
+            if (!isOpen) item.classList.add('open');
+          });
+        }
+      });
+      document.addEventListener('click', function() {
+        items.forEach(function(i) { i.classList.remove('open'); });
+        document.querySelectorAll('.ltb-drop-item').forEach(function(i) { i.classList.remove('open-sub'); });
+      });
+      window.toggleSub = function(e, id) {
+        e.stopPropagation();
+        var btn = e.currentTarget;
+        var isOpen = btn.classList.contains('open-sub');
+        document.querySelectorAll('.ltb-drop-item').forEach(function(i) { i.classList.remove('open-sub'); });
+        if (!isOpen) btn.classList.add('open-sub');
+      };
+    })();
+  </script>
+
+</body>
+</html>
