@@ -145,8 +145,19 @@
     .cta-btn-outline { background: transparent; color: #c9a84c; font-size: 15px; font-weight: 700; padding: 16px 36px; border-radius: 6px; border: 0.5px solid #c9a84c; cursor: pointer; letter-spacing: 1px; text-transform: uppercase; font-family: inherit; text-decoration: none; display: inline-block; }
     .cta-btn-outline:hover { background: #1a1400; }
 
-    footer { padding: 28px 40px; text-align: center; border-top: 0.5px solid #1a1a1a; }
-    footer p { font-size: 12px; color: #333; letter-spacing: 1px; }
+    /* ── FOOTER ── */
+    footer { background: #0a0a0a; border-top: 0.5px solid #1a1a1a; padding: 56px 40px 28px; }
+    .ftr-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; }
+    .ftr-logo { font-size: 18px; font-weight: 900; letter-spacing: 4px; color: #c9a84c; text-decoration: none; display: inline-block; margin-bottom: 14px; }
+    .ftr-brand p { font-size: 14px; color: #666; line-height: 1.7; max-width: 300px; }
+    .ftr-col h4 { font-size: 11px; letter-spacing: 2px; color: #555; text-transform: uppercase; margin-bottom: 14px; }
+    .ftr-col a { display: block; font-size: 14px; color: #999; text-decoration: none; padding: 6px 0; }
+    .ftr-col a:hover { color: #c9a84c; }
+    .ftr-bottom { max-width: 1100px; margin: 40px auto 0; padding-top: 24px; border-top: 0.5px solid #1a1a1a; }
+    .ftr-bottom p { font-size: 12px; color: #444; letter-spacing: 0.5px; line-height: 1.7; }
+    .ftr-disclaimer { font-size: 11px; color: #333; margin-top: 10px; max-width: 900px; }
+    @media (max-width: 900px) { .ftr-inner { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 560px) { footer { padding: 40px 24px 24px; } .ftr-inner { grid-template-columns: 1fr; gap: 28px; } }
 
     @media (max-width: 700px) {
       .ltb-nav { padding: 0 20px; }
@@ -675,7 +686,41 @@
   </section>
 
   <footer>
-    <p>&copy; 2026 Learn The Biz &middot; All Rights Reserved &middot; Information verified from official Michigan and IRS sources</p>
+    <div class="ftr-inner">
+      <div class="ftr-brand">
+        <a class="ftr-logo" href="index.html">LEARN THE BIZ</a>
+        <p>Plain-English guides to starting a business. No jargon, no upsells &mdash; just the steps, the real costs, and the deadlines that actually matter.</p>
+      </div>
+      <div class="ftr-col">
+        <h4>Start Forming</h4>
+        <a href="llc-michigan.html">Michigan LLC</a>
+        <a href="scorp-michigan.html">Michigan S-Corp</a>
+        <a href="ccorp-michigan.html">Michigan C-Corp</a>
+        <a href="sole-michigan.html">Michigan Sole Proprietorship</a>
+        <a href="partnership-michigan.html">Michigan Partnership</a>
+        <a href="nonprofit-michigan.html">Michigan Nonprofit</a>
+      </div>
+      <div class="ftr-col">
+        <h4>Learn</h4>
+        <a href="learn.html">Find My Business Type</a>
+        <a href="learn.html#quiz">Take the Quiz</a>
+        <a href="learn.html?panel=llc">What Is an LLC?</a>
+        <a href="learn.html?panel=scorp">What Is an S-Corp?</a>
+        <a href="learn.html?panel=nonprofit">What Is a Nonprofit?</a>
+      </div>
+      <div class="ftr-col">
+        <h4>Michigan Taxes</h4>
+        <a href="tax-michigan.html#llc">LLC Taxes</a>
+        <a href="tax-michigan.html#scorp">S-Corp Taxes</a>
+        <a href="tax-michigan.html#ccorp">C-Corp Taxes</a>
+        <a href="tax-michigan.html#sole">Sole Proprietor Taxes</a>
+        <a href="tax-michigan.html#partnership">Partnership Taxes</a>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <p>&copy; 2026 Learn The Biz &middot; All Rights Reserved &middot; Information verified from official Michigan LARA, Michigan Treasury, and IRS sources.</p>
+      <p class="ftr-disclaimer">Learn The Biz provides general educational information only. It is not legal, tax, or financial advice and does not create a professional relationship. Filing fees, forms, and deadlines change &mdash; always confirm current details with the relevant agency or a licensed professional before you file.</p>
+    </div>
   </footer>
 
   <script>
